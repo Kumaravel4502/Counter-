@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+
+    <div class=" mt-[200px] mx-auto flex flex-col justify-center items-center">
+
+        <div class="flex flex-col justify-center items-center ">
+            <p class="font-bold text-3xl">Counter</p>
+            <p class="text-3xl m-4" id="count">0</p>
+        </div>
+        <div class=" flex justify-center items-center gap-4 text-[18px]">
+            <button class="bg-green-500 px-3 py-2 rounded-lg" id="Decrease">Decrease</button>
+            <button class="bg-pink-500 px-3 py-2 rounded-lg" id="Reset">Reset</button>
+            <button class="bg-yellow-500 px-3 py-2 rounded-lg" id="Increase">Increase</button>
+        </div>
+    </div>
+    <script>
+
+
+        const countElement = document.getElementById("count")
+        const DecreaseElement = document.getElementById("Decrease")
+        const ResetElement = document.getElementById("Reset")
+        const IncreaseElement = document.getElementById("Increase")
+
+        DecreaseElement.addEventListener("click", () => {
+            countElement.textContent = parseInt(countElement.textContent) - 1
+        })
+
+        ResetElement.addEventListener("click", () => {
+            countElement.textContent = 0
+        })
+
+        IncreaseElement.addEventListener("click", () => {
+            countElement.textContent = parseInt(countElement.textContent) + 1
+        })
+
+    </script>
+</body>
+
+</html>
